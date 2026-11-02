@@ -137,14 +137,9 @@ h1{margin:0 0 8px;font-size:clamp(28px,5vw,44px);line-height:1.1;background:line
 .team-card p{font-size:13px;color:var(--mut);margin:5px 0}
 .placeholder-note{border:1px dashed var(--line);border-radius:12px;padding:16px;color:var(--mut);font-size:13px;margin-top:18px}
 @media(max-width:560px){.info-wrap{padding:26px 14px}.presentation-frame{min-height:420px}}
-
-/* Image slots: just fill in the src="" of each <img>. Empty src shows a placeholder. */
 .team-photo{position:relative;overflow:hidden}
-.team-photo {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.team-photo [src=""],.team-photo :not([src]){display:none}
-.thumb{position:relative;width:100%;aspect-ratio:16/9;margin:-4px 0 6px;border-radius:10px;overflow:hidden;background:#17244b;border:1px solid var(--line);display:grid;place-items:center;color:var(--mut);font-size:12px}
-.thumb {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.thumb [src=""],.thumb :not([src]){display:none}
+.team-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.team-photo img[src=""],.team-photo img:not([src]){display:none}
 </style>
 </head>
 <body>
@@ -165,9 +160,9 @@ h1{margin:0 0 8px;font-size:clamp(28px,5vw,44px);line-height:1.1;background:line
     <h1>How butterflies shape light</h1>
     <p class="lead">Three interactive models in one place: zoom into real wing nanostructures, see how Morpho-style ridges sort sunlight and stay cooler, and watch micro-pits trap light that a flat surface would throw away.</p>
     <div class="cards">
-      <div class="card"><div class="thumb">Image< src="" alt="Nanophotonics Explorer" loading="lazy"></div><div class="n">Model 1 · Structure</div><h2>Nanophotonics Explorer</h2><p>A 3D museum of five species, from the whole butterfly down to the nanostructure. Compare species side by side, toggle pigment vs. structural colour, and open the reflectance and biomimicry notes.</p><button data-go="explorer">Open explorer →</button></div>
-      <div class="card"><div class="thumb">Image< src="" alt="Spectral & Thermal Heat Map" loading="lazy"></div><div class="n">Model 2 · Colour &amp; heat</div><h2>Spectral &amp; Thermal Heat Map</h2><p>A black absorber vs. Morpho-inspired nanoridges above the same photovoltaic layer. Tune ridge spacing, sun angle and band to see scattering, electricity and temperature.</p><button data-go="thermal">Open heat map →</button></div>
-      <div class="card"><div class="thumb">Image< src="" alt="Ray-Tracing Light Trap" loading="lazy"></div><div class="n">Model 3 · Light trapping</div><h2>Ray-Tracing Light Trap</h2><p>Flat glass vs. Papilio-style micro-cavities, traced ray by ray. Every extra bounce is another chance to absorb, so the pits capture more light, especially at low sun angles.</p><button data-go="traps">Open light trap →</button></div>
+      <div class="card"><div class="n">Model 1 · Structure</div><h2>Nanophotonics Explorer</h2><p>A 3D museum of five species, from the whole butterfly down to the nanostructure. Compare species side by side, toggle pigment vs. structural colour, and open the reflectance and biomimicry notes.</p><button data-go="explorer">Open explorer →</button></div>
+      <div class="card"><div class="n">Model 2 · Colour &amp; heat</div><h2>Spectral &amp; Thermal Heat Map</h2><p>A black absorber vs. Morpho-inspired nanoridges above the same photovoltaic layer. Tune ridge spacing, sun angle and band to see scattering, electricity and temperature.</p><button data-go="thermal">Open heat map →</button></div>
+      <div class="card"><div class="n">Model 3 · Light trapping</div><h2>Ray-Tracing Light Trap</h2><p>Flat glass vs. Papilio-style micro-cavities, traced ray by ray. Every extra bounce is another chance to absorb, so the pits capture more light, especially at low sun angles.</p><button data-go="traps">Open light trap →</button></div>
     </div>
     <div class="flow"><span>Nanostructure</span><b>→</b><span>Structural colour</span><b>→</b><span>Wavelength sorting &amp; cooling</span><b>→</b><span>Light trapping</span></div>
     <p class="note">All three are simplified educational models, not full electromagnetic simulations. Each tab loads the first time you open it.</p>
@@ -227,7 +222,6 @@ h1{margin:0 0 8px;font-size:clamp(28px,5vw,44px);line-height:1.1;background:line
 <div class="research-cards">
 
   <article class="research-card">
-    <div class="thumb">Image< src="" alt="India's Solar Energy Share Rises to 28.4%" loading="lazy"></div>
     <span class="category">01 · Energy News</span>
     <h3>India's Solar Energy Share Rises to 28.4%</h3>
     <p>Explores the growing contribution of solar energy to India's total installed power capacity and the country's renewable energy transition.</p>
@@ -235,7 +229,6 @@ h1{margin:0 0 8px;font-size:clamp(28px,5vw,44px);line-height:1.1;background:line
   </article>
 
   <article class="research-card">
-    <div class="thumb">Image< src="" alt="What Is a Solar Panel?" loading="lazy"></div>
     <span class="category">02 · Solar Technology</span>
     <h3>What Is a Solar Panel?</h3>
     <p>An introductory guide to solar panels, photovoltaic cells and how sunlight is converted into electrical energy.</p>
@@ -243,7 +236,6 @@ h1{margin:0 0 8px;font-size:clamp(28px,5vw,44px);line-height:1.1;background:line
   </article>
 
   <article class="research-card">
-    <div class="thumb">Image<img src="" alt="Butterfly Wings Inspire a Breakthrough Solar Panel Design" loading="lazy"></div>
     <span class="category">03 · Science &amp; Innovation</span>
     <h3>Butterfly Wings Inspire a Breakthrough Solar Panel Design</h3>
     <p>Reports on a butterfly-inspired solar panel concept and its potential to improve electricity production.</p>
@@ -251,7 +243,6 @@ h1{margin:0 0 8px;font-size:clamp(28px,5vw,44px);line-height:1.1;background:line
   </article>
 
   <article class="research-card">
-    <div class="thumb">Image<img src="" alt="Butterfly-Inspired Solar Panel Design" loading="lazy"></div>
     <span class="category">04 · Biomimicry</span>
     <h3>Butterfly-Inspired Solar Panel Design</h3>
     <p>Explores how the unique structures of butterfly wings could inspire more efficient solar panel surfaces and improved light absorption.</p>
@@ -259,7 +250,6 @@ h1{margin:0 0 8px;font-size:clamp(28px,5vw,44px);line-height:1.1;background:line
   </article>
 
   <article class="research-card">
-    <div class="thumb">Image<img src="" alt="How Butterfly Wings Could Improve Solar Panels" loading="lazy"></div>
     <span class="category">05 · Research &amp; Technology</span>
     <h3>How Butterfly Wings Could Improve Solar Panels</h3>
     <p>Discusses the light-absorbing properties of butterfly wing structures and their possible applications in solar technology.</p>
@@ -267,7 +257,6 @@ h1{margin:0 0 8px;font-size:clamp(28px,5vw,44px);line-height:1.1;background:line
   </article>
 
   <article class="research-card">
-    <div class="thumb">Image<img src="" alt="Black Solar Panels vs Blue Solar Panels" loading="lazy"></div>
     <span class="category">06 · Solar Comparison</span>
     <h3>Black Solar Panels vs Blue Solar Panels</h3>
     <p>Compares black and blue solar panels, looking at their technologies, visual differences and performance considerations.</p>
@@ -275,7 +264,6 @@ h1{margin:0 0 8px;font-size:clamp(28px,5vw,44px);line-height:1.1;background:line
   </article>
 
   <article class="research-card">
-    <div class="thumb">Image<img src="" alt="Butterfly Wing UV Optical Systems" loading="lazy"></div>
     <span class="category">07 · Butterfly Optics</span>
     <h3>Butterfly Wing UV Optical Systems</h3>
     <p>Explores ultraviolet patterns and the optical properties of butterfly wings, showing how nature manipulates light through microscopic structures.</p>
@@ -283,7 +271,6 @@ h1{margin:0 0 8px;font-size:clamp(28px,5vw,44px);line-height:1.1;background:line
   </article>
 
   <article class="research-card">
-    <div class="thumb">Image<img src="" alt="Anti-Reflective Nanostructures in Glasswing Butterflies" loading="lazy"></div>
     <span class="category">08 · Peer-Reviewed Research</span>
     <h3>Anti-Reflective Nanostructures in Glasswing Butterflies</h3>
     <p>A scientific study of the random nanopillar structures on glasswing butterfly wings and their role in reducing reflection across different viewing angles.</p>
@@ -337,7 +324,7 @@ h1{margin:0 0 8px;font-size:clamp(28px,5vw,44px);line-height:1.1;background:line
       <h1>Meet Our Team</h1>
       <p class="info-lead">The people behind the Butterfly Photonics Lab project.</p>
       <div class="team-grid">
-        <article class="team-card"><div class="team-photo">Photo<img src="" alt="Arya Rai" loading="lazy"></div>
+        <article class="team-card"><div class="team-photo">Photo<img src="" alt="Arya Rai"></div>
 
             <h3>ARYA RAI</h3>
 
@@ -361,7 +348,7 @@ h1{margin:0 0 8px;font-size:clamp(28px,5vw,44px);line-height:1.1;background:line
         
         
         </article>
-        <article class="team-card"><div class="team-photo">Photo<img src="nysa_roshan.jpeg" alt="Nysa Roshan" loading="lazy"></div>
+        <article class="team-card"><div class="team-photo">Photo<img src="" alt="Nysa Roshan"></div>
 
             <h3>NYSA ROSHAN</h3>
 
@@ -383,7 +370,7 @@ h1{margin:0 0 8px;font-size:clamp(28px,5vw,44px);line-height:1.1;background:line
             </p>
         
         </article>
-        <article class="team-card"><div class="team-photo">Photo<img src="" alt="Parnavi Sarode" loading="lazy"></div>
+        <article class="team-card"><div class="team-photo">Photo<img src="" alt="Parnavi Sarode"></div>
 
             <h3>PARNAVI SARODE </h3>
 
@@ -405,7 +392,7 @@ h1{margin:0 0 8px;font-size:clamp(28px,5vw,44px);line-height:1.1;background:line
             </p>
         
         </article>
-        <article class="team-card"><div class="team-photo">Photo<img src="" alt="Aadreeja Pandey" loading="lazy"></div>
+        <article class="team-card"><div class="team-photo">Photo<img src="" alt="Aadreeja Pandey"></div>
         
         <h3>AADREEJA PANDEY </h3>
 
